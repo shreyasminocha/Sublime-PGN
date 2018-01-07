@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>pgn</string>
+	</array>
+	<key>name</key>
+	<string>Portable Game Notation</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>comment</key>
+			<string>Brace comments</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>comment.block.pgn</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Nested variations</string>
+			<key>include</key>
+			<string>#variations</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Rest of line comments</string>
+			<key>match</key>
+			<string>;.*$</string>
+			<key>name</key>
+			<string>comment.line.semicolon.pgn</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\[([a-zA-Z]*) (\".*\")</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language.pgn</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.pgn</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>PGN Tags</string>
+			<key>end</key>
+			<string>\]</string>
+			<key>name</key>
+			<string>entity.meta.tag.pgn</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>variations</key>
+		<dict>
+			<key>begin</key>
+			<string>\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>keyword.control.pgn</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#variations</string>
+					<key>name</key>
+					<string>keyword.control.pgn</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>text.pgn</string>
+	<key>uuid</key>
+	<string>7925aa8f-2057-4b65-a5a7-ffb0772fc82b</string>
+</dict>
+</plist>

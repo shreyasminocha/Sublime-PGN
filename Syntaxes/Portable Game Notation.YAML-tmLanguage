@@ -1,0 +1,38 @@
+# [PackageDev]: target_format: plist, ext: tmLanguage
+
+---
+name: Portable Game Notation
+scopeName: text.pgn
+fileTypes: [pgn]
+uuid: 7925aa8f-2057-4b65-a5a7-ffb0772fc82b
+
+repository:
+  variations: 
+    begin: \(
+    end: \)
+    name: keyword.control.pgn # abuse the control keyword scope
+
+    patterns:
+    - include: "#variations"
+      name: keyword.control.pgn
+
+patterns:
+- comment: Brace comments
+  name: comment.block.pgn
+  begin: \{
+  end: \}
+
+- comment: Nested variations
+  include: '#variations'
+
+- comment: Rest of line comments
+  name: comment.line.semicolon.pgn
+  match: ;.*$
+
+- comment: PGN Tags
+  name: entity.meta.tag.pgn
+  begin: \[([a-zA-Z]*) (\".*\")
+  beginCaptures:
+    '1': {name: constant.language.pgn}
+    '2': {name: string.quoted.double.pgn}
+  end: \]
