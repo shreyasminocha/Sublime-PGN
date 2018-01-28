@@ -6,19 +6,17 @@ PGN(short for 'Portable Game Notation') is a standard for representing chess gam
 
 ## Installation
 
-<!-- ## Using Package Control -->
+## Using Package Control
 
-<!-- - [Install Package Control](//packagecontrol.io/installation) if you haven't already -->
+- [Install Package Control](//packagecontrol.io/installation) if you haven't already
 
-<!-- - Open the Command Palette in Sublime Text(`Cmd/Ctrl+Shift+ P`) -->
+- Open the Command Palette in Sublime Text(`Cmd/Ctrl+Shift+ P`)
 
-<!-- - Select 'Package Control: Install Package' -->
+- Select 'Package Control: Install Package'
 
-<!-- - Select 'PGN Support' -->
+- Select 'PGN Support'
 
-<!-- ## Manual installation -->
-
-While I'm waiting for [this](//github.com/wbond/package_control_channel/pull/6859) pull request to get merged, here are the manual installation instructions:
+## Manual installation
 
 - Clone this repository(`git clone https://github.com/shreyasminocha/Sublime-PGN`)
 
