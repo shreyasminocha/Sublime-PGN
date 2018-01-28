@@ -6,7 +6,7 @@ PGN(short for 'Portable Game Notation') is a standard for representing chess gam
 
 ## Installation
 
-## Using Package Control
+### Using Package Control
 
 - [Install Package Control](//packagecontrol.io/installation) if you haven't already
 
@@ -16,7 +16,7 @@ PGN(short for 'Portable Game Notation') is a standard for representing chess gam
 
 - Select 'PGN Support'
 
-## Manual installation
+### Manual installation
 
 - Clone this repository(`git clone https://github.com/shreyasminocha/Sublime-PGN`)
 
