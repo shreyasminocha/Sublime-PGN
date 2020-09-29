@@ -76,6 +76,16 @@
 					<key>name</key>
 					<string>keyword.control.pgn</string>
 				</dict>
+				<dict>
+					<key>begin</key>
+					<string>\{</string>
+					<key>comment</key>
+					<string>Brace comments</string>
+					<key>end</key>
+					<string>\}</string>
+					<key>name</key>
+					<string>comment.block.pgn</string>
+				</dict>
 			</array>
 		</dict>
 	</dict>
